@@ -122,7 +122,8 @@ select{
 </html>
 
 <?php 
-
+ 
+   if(isset($_POST['submit'])){
  
         function pg_connection_string_from_database_url() {
          extract(parse_url($_ENV["DATABASE_URL"]));
@@ -135,7 +136,7 @@ select{
         $surname = pg_escape_string($_POST['surname']); 
         $emailaddress = pg_escape_string($_POST['emailaddress']); 
 
-        $query = "INSERT INTO friends(firstname, surname, emailaddress) VALUES('" . $firstname . "', '" . $surname . "', s'" . $emailaddress . "')";
+        $query = "INSERT INTO friends(firstname, surname, emailaddress) VALUES('" . $firstname . "', '" . $surname . "', '" . $emailaddress . "')";
         $result = pg_query($pg_conn,$query); 
         if (!$result) { 
             $errormessage = pg_last_error(); 
@@ -158,6 +159,6 @@ select{
 
    
     pg_close();
-
+   }
    
         ?> 
