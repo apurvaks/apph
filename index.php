@@ -94,7 +94,7 @@ select{
 <ul class="form-style-1">
     <li><label>Full Name <span class="required">*</span></label><input type="text" name="firstname" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="surname" class="field-divided" placeholder="Last" /></li>
     <li>
-        <label>Email <span class="required">*</span></label>
+        <label>Email <span class="required">*</span>email should be less than 20 character</label>
         <input type="text" name="emailaddress" class="field-long" />
     </li>
     
@@ -142,7 +142,7 @@ select{
     echo "</tr>";}
 
     echo "</table>";
-    $result = pg_query($pg_conn,"DELETE  FROM friends"); 
+    
    
     pg_close();
 
