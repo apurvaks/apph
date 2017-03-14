@@ -75,6 +75,12 @@ select{
     border: none;
     color: #fff;
 }
+  .form-style-1 input[type=reset], .form-style-1 input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
 .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
     background: #4691A4;
     box-shadow:none;
@@ -146,7 +152,7 @@ select{
     echo "</tr>";}
 
     echo "</table>";
-    $result = pg_query($pg_conn,"DELETE FROM friends");  
+  #  $result = pg_query($pg_conn,"DELETE FROM friends");  
 
    
     pg_close();
