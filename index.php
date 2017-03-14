@@ -128,7 +128,7 @@ select{
             echo "Error with query: " . $errormessage; 
             exit(); 
         } 
-        printf ("These values were inserted into the database - %s %s %s", $firstname, $surname, $emailaddress); 
+       # printf ("These values were inserted into the database - %s %s %s", $firstname, $surname, $emailaddress); 
        # pg_close(); 
 
     $result = pg_query($pg_conn,"SELECT * FROM friends");  
