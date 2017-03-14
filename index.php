@@ -1,6 +1,6 @@
 <html> 
     <body> 
-        <form action="add.php" method="post"> 
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> 
             First Name : <input type="text" name="firstname" size="40" length="40" value="First Name"><BR> 
             Surname : <input type="text" name="surname" size="40" length="40" value="Surname"><BR> 
             Email Address : <input type="text" name="emailaddress" size="40" length="40" value="Email Address"><BR> 
@@ -31,7 +31,7 @@
             exit(); 
         } 
         printf ("These values were inserted into the database - %s %s %s", $firstname, $surname, $emailaddress); 
-        pg_close(); 
+      
 
     $result = pg_query($pg_conn,"SELECT * FROM friends");  
 	echo "<table>";  
@@ -44,7 +44,7 @@
 	echo "</table>";
 
 	echo "string";
-
+       pg_close(); 
 
 
         ?> 
