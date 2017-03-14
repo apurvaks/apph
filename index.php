@@ -100,12 +100,10 @@ select{
     
    
     <li>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" /><input type="reset" name="reset" value="Clear It"> 
 
     </li>
-    <li>
-    <input type="reset" name="reset" value="Clear It"> 
-    </li>
+    
 </ul>
 </form>
 </body>
@@ -134,7 +132,7 @@ select{
        # pg_close(); 
 
     $result = pg_query($pg_conn,"SELECT * FROM friends");  
-    echo "<table border='1'>";  
+    echo "<table border='1' align='center'>";  
     while($row=pg_fetch_assoc($result)){echo "<tr>";  
     echo "<td align='center' width='200'>" . $row['firstname'] . "</td>";  
     echo "<td align='center' width='200'>" . $row['surname'] . "</td>";  
