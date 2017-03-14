@@ -95,7 +95,7 @@ select{
     <li><label>Full Name <span class="required">*</span></label><input type="text" name="firstname" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="surname" class="field-divided" placeholder="Last" /></li>
     <li>
         <label>Email <span class="required">*</span></label>
-        <input type="emailaddress" name="field3" class="field-long" />
+        <input type="text" name="emailaddress" class="field-long" />
     </li>
     
    
