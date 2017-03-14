@@ -112,7 +112,7 @@ select{
     
    
     <li>
-        <input type="submit" value="Submit" /><input type="reset" name="reset" value="Clear It"> 
+        <input type="submit" value="Submit" />&nbsp;<input type="reset" name="reset" value="Clear It"> 
 
     </li>
     
