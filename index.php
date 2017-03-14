@@ -1,9 +1,9 @@
 <html> 
     <body> 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"> 
-            First Name : <input type="text" name="firstname" size="40" length="40" value="First Name"><BR> 
-            Surname : <input type="text" name="surname" size="40" length="40" value="Surname"><BR> 
-            Email Address : <input type="text" name="emailaddress" size="40" length="40" value="Email Address"><BR> 
+            First Name : <input type="text" name="firstname" size="40" length="40" value="First Name"><BR> <br><br>
+            Surname : <input type="text" name="surname" size="40" length="40" value="Surname"><BR> <br><br>
+            Email Address : <input type="text" name="emailaddress" size="40" length="40" value="Email Address"><BR><br><br> 
             <input type="submit" name="submit" value="Submit"> 
             <input type="reset" name="reset" value="Clear It"> 
         </form> 
@@ -34,7 +34,7 @@
       
 
     $result = pg_query($pg_conn,"SELECT * FROM friends");  
-	echo "<table>";  
+	echo "<table border='2'>";  
 	while($row=pg_fetch_assoc($result)){echo "<tr>";  
 	echo "<td align='center' width='200'>" . $row['firstname'] . "</td>";  
 	echo "<td align='center' width='200'>" . $row['surname'] . "</td>";  
