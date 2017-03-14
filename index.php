@@ -128,12 +128,12 @@ select{
         }
         $pg_conn = pg_connect(pg_connection_string_from_database_url());
         #$db = pg_connect('host=localhost dbname=contacts user=postgres password=""'); 
-
+   if(isset($_POST['submit'])){
         $firstname = pg_escape_string($_POST['firstname']); 
         $surname = pg_escape_string($_POST['surname']); 
         $emailaddress = pg_escape_string($_POST['emailaddress']); 
 
-        $query = "INSERT INTO friends(firstname, surname, emailaddress) VALUES('" . $firstname . "', '" . $surname . "', '" . $emailaddress . "')";
+        $query = "INSERT INTO friends(firstname, surname, emailaddress) VALUES('" . $firstname . "', '" . $surname . "', s'" . $emailaddress . "')";
         $result = pg_query($pg_conn,$query); 
         if (!$result) { 
             $errormessage = pg_last_error(); 
@@ -157,5 +157,5 @@ select{
    
     pg_close();
 
-
+   }
         ?> 
