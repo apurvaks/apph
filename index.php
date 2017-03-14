@@ -34,7 +34,7 @@
       
 
     $result = pg_query($pg_conn,"SELECT * FROM friends");  
-	echo "<table>";  
+	echo "<table border="2">";  
 	while($row=pg_fetch_assoc($result)){echo "<tr>";  
 	echo "<td align='center' width='200'>" . $row['firstname'] . "</td>";  
 	echo "<td align='center' width='200'>" . $row['surname'] . "</td>";  
