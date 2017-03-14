@@ -142,8 +142,8 @@ select{
     echo "</tr>";}
 
     echo "</table>";
-
-    echo "string";
+    $result = pg_query($pg_conn,"DELETE * FROM friends"); 
+   
     pg_close();
 
 
