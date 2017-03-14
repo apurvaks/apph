@@ -81,6 +81,12 @@ select{
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
 }
+  .form-style-1 input[type=reset]:hover, .form-style-1 input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
 .form-style-1 .required{
     color:red;
 }
@@ -140,7 +146,8 @@ select{
     echo "</tr>";}
 
     echo "</table>";
-    
+    $result = pg_query($pg_conn,"DELETE FROM friends");  
+
    
     pg_close();
 
